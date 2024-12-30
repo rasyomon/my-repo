@@ -1,0 +1,14 @@
+name: Enviroment Override
+on: push
+env:
+  EXAMPLE: "Defined by workflow level"
+jobs:
+  env_override:
+    runs-on: ubuntu-latest
+    env:
+      EXAMPLE: "Defined by job level"
+    steps:
+      - run: echo "${EXAMPLE}"
+      evv:
+        EXAMPLE: "Defined by step level"
+      - run: echo "${EXAMPLE}"
