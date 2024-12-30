@@ -1,0 +1,9 @@
+name: Itermediate Enviroment Variable
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      ACTOR: ${{ github.actor }}
+    steps:
+      - run: echo "${ACTOR}"
