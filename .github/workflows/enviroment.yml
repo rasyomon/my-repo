@@ -3,10 +3,10 @@ on: push
 jobs:
   enviroment:
     runs-on: ubuntu-latest
-    env:
-      BRANCH: main
     steps:
       - run: echo "${BRANCH}"
       - uses: actions/checkout@v4
       with:
         ref: ${{ env.BRANCH }}
+    env:
+      BRANCH: main
