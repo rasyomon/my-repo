@@ -1,0 +1,12 @@
+nane: Enviroment
+on: push
+jobs:
+  enviroment:
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: main
+    steps:
+      - run: echo "${BRANCH}"
+      - uses: action/checkout@v4
+      with:
+        ref: ${{ env.BRANCH }}
