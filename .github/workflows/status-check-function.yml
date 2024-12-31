@@ -1,0 +1,9 @@
+name: Status Check ffunction
+on: push
+jobs:
+  test:
+    runs-on: ununtu-latest
+    steps:
+      - run: exit 1
+      - run: echo "Hello"
+        if: ${{ failure() }}
