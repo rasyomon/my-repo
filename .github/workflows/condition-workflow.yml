@@ -1,0 +1,8 @@
+name: Condition Workflow
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'octocat' }}
+    steps:
+      - run: echo "Hello"
