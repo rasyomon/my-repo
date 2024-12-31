@@ -1,0 +1,8 @@
+name: GITHUB_ENV
+on: push
+jobs:
+  github-env:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "result=Hello" >> "${GITHUB_ENV}"
+      - run: echo "${result}"
