@@ -2,7 +2,7 @@ name: Status Check ffunction
 on: push
 jobs:
   test:
-    runs-on: ununtu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: exit 1
       - run: echo "Hello"

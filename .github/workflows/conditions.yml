@@ -2,7 +2,7 @@ name: Conditions
 on: push
 jobs:
   test:
-    runs-on: ubutnu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Hello"
         if: ${{ contains(github.run_id, '1') }}
